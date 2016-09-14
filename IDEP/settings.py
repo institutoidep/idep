@@ -55,7 +55,7 @@ ROOT_URLCONF = 'IDEP.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
+        'DIRS': [  
                     '/home/fco_ozuna/ctrl_escolar/Src/templates', 
         ],
         'APP_DIRS': True,
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'IDEP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'idep',
-        'USER': 'idep',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'NAME': 'institutoidep$idep',
+        'USER': 'institutoidep',
+        'PASSWORD': 'idep2016',
+        'HOST': 'institutoidep.mysql.pythonanywhere-services.com',
         'PORT': '',
     }
 }
@@ -126,5 +126,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = 'media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
 
+MEDIA_ROOT = 'media/'
